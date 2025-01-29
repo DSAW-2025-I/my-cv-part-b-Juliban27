@@ -1,0 +1,60 @@
+---
+
+import Layout from '@/layouts/Layout.astro';
+
+import AboutMe from '@/components/AboutMe.astro'
+import AcademicBackground from '@/components/AcademicBackground.astro';
+import Badge from '@/components/Badge.astro';
+import Card from '@/components/Card.astro';
+import CodeSymbol from '@/icons/CodeSymbol.astro';
+import GitHubIcon from '@/icons/GitHub.astro';
+import LinkedInIcon from '@/icons/LinkedIn.astro'
+import MailIcon from '@/icons/Mail.astro';
+import Profile from '@/icons/Profile.astro';
+import Projects from '@/components/Projects.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import SocialPill from '@/components/SocialPill.astro';
+import Studies from '@/icons/Studies.astro';
+import Hero from '@/components/Hero.astro';
+
+---
+
+<Layout 
+	title="Portfolio Julian Romero - Software and Web developer"
+	description='I specialize in building responsive, user-focused websites with clean, efficient code. My skills in modern web technologies and attention to detail make me a strong addition to any team seeking scalable, long-term solutions.'
+>
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+			<Hero>
+				</slot>
+		  	</Hero>
+		</SectionContainer>
+		
+	<SectionContainer id="academicBackground" class="pt-24 pb-16" >
+		<h2 class=" text-white text-3xl font-semibold mb-6 flex flex-row gap-x-3 items-center pb-6" >
+			<Studies class="size-4 md:size-6"/>
+			Academic Background
+		</h2>
+		<AcademicBackground/>
+	</SectionContainer>
+
+	<SectionContainer id="projects" class="py-24" >
+		<h2 class=" text-white text-3xl font-semibold mb-6 flex flex-row gap-x-3 items-center" >
+			<CodeSymbol class="size-4 md:size-7"/>
+			Projects
+		</h2>
+		<Projects/>
+	</SectionContainer>
+
+	<SectionContainer id="about" class="py-24" >
+		<h2 class=" text-white text-3xl font-semibold mb-6 flex flex-row gap-x-3 items-center " >
+			<Profile class="size-4 md:size-7"/>
+			About me
+		</h2>
+		<AboutMe/>
+	</SectionContainer>
+
+	</main>
+	
+</Layout>
+
